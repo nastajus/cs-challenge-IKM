@@ -55,35 +55,6 @@ namespace ConsoleApp4_IKMtest
             private int num = 1;
         }
 
-        //7
-        /*
-         * tried applying this: https://www.tutorialspoint.com/csharp/csharp_queue.htm
-         * wouldn't compile
-         * 
-        Queue q = new Queue();
-        q.Enqueue('A');
-        q.Enqueue('M');
-        q.Enqueue('G');
-        q.Enqueue('W');
-         
-        WriteLine("Current queue: ");
-        foreach (char c in q) Console.Write(c + " ");
-         
-        WriteLine();
-        q.Enqueue('V');
-        q.Enqueue('H');
-        WriteLine("Current queue: ");
-        foreach (char c in q) Console.Write(c + " ");
-         
-        WriteLine();
-        WriteLine("Removing some values ");
-        char ch = (char)q.Dequeue();
-        WriteLine("The removed value: {0}", ch);
-        ch = (char) q.Dequeue();
-        WriteLine("The removed value: {0}", ch);
-         
-        ReadKey();
-
 
 
         /*
@@ -112,7 +83,7 @@ namespace ConsoleApp4_IKMtest
 
 
 
-        //15 - 2/2
+        //16 - 2/2
         private static void writeOutput(object o)
         {
             if (o == null)
@@ -285,7 +256,7 @@ namespace ConsoleApp4_IKMtest
             }
         }
 
-        //28
+        //29
         //a) conversion exception? no
         //b) instances of this class are stored on the stack because it only contains value types.
         //e) heap? 
@@ -342,28 +313,31 @@ namespace ConsoleApp4_IKMtest
 
             //37 
             //decorate property
+            WriteLine("Question #37: Decorate property (Attribute)");
 
             //36
             //registry 
 
             //32
-
+            WriteLine("Question #32: Delegates");
             //e) delegates are ideal for callback functions
 
-            //30 
+            //30
+            WriteLine("Question #30: string variable manipulations");
             String s = "NY";
             s.ToUpper();
             s.ToLowerInvariant();
             s.Clone();
             s += "er";
             WriteLine(s);
-            ReadKey();
+            //ReadKey();
             s.GetType(); //ctrl + e, h (inheritance hierarchy resharper)
 
-            //28
+            //29
+            WriteLine("Question #29: casting, stack & heap, struts & class");
             Rectangle r = new Rectangle();
             WriteLine(r.Area);
-            ReadKey();
+            //ReadKey();
 
             //25
             //which will compile successfully?
@@ -371,16 +345,21 @@ namespace ConsoleApp4_IKMtest
             //24 generics C#
 
             //23 expando object
+            WriteLine("Question #23: Expando object");
 
             //22
+            WriteLine("Question #22: Generics, lambda op (=>), passing methods as parameters, implicit delegate");
+            //https://stackoverflow.com/questions/4015451/pass-a-method-as-a-parameter
             Main22();
-            ReadKey();
+            //ReadKey();
 
-            //21 again 404
+            //21 again,  HTTP 404 error occurred -- later as //27
+            WriteLine("Question #21 umm #27...: inheritance execution order");
             MyTest.Main21Again();
-            ReadKey();
+            //ReadKey();
 
             //21
+            WriteLine("Question #21: nullables??");
             City city = new City();
             city.name = "Los Angeles";
 
@@ -399,7 +378,7 @@ namespace ConsoleApp4_IKMtest
                     labelCountryB = "US";
                 }
             }
-            //ReadKey();
+            ////ReadKey();
             //c
             string labelCountryC = city.country != null ? (city.country.abbrev != null ? city.country.abbrev : "US") : "US";
 
@@ -418,6 +397,7 @@ namespace ConsoleApp4_IKMtest
             //e ??  double question mark is null-coalescing
 
             //20
+            WriteLine("Question #20: More LINQ!");
             int[] values = new int[] {5, 4, 3, 4, 2, 5, 9, 4, 2, 4};
             var results = (from c in values orderby c select c * c).Distinct().Take(5);
             foreach (var resultt in results)
@@ -461,14 +441,15 @@ namespace ConsoleApp4_IKMtest
 //                WriteLine(resultt);
 //            }
 //            WriteLine("--");
-            ReadKey();
+            //ReadKey();
 
 
             //19
             ClassTester.Main19();
-            ReadKey();
+            //ReadKey();
 
-            //16 -- skipped
+            //17 -- skipped
+            WriteLine("Question #17: System Event Log");
             //EventLogEntry.WriteEvent -- nope
             //EventLog.WriteEntry("asdf");
             //EventInstance.WriteEntry();
@@ -476,7 +457,9 @@ namespace ConsoleApp4_IKMtest
 
 
 
-            //15 - 1/2
+            //16 - 1/2
+            WriteLine("Question #16: Bitwise Operators");
+            //https://stackoverflow.com/questions/4757447/understanding-the-behavior-of-a-single-ampersand-operator-on-integers
             bool? a = null, b = null;
             writeOutput(a & b);
             writeOutput(a | b);
@@ -492,12 +475,14 @@ namespace ConsoleApp4_IKMtest
 
 
             //13
+            WriteLine("Question #13: (byte) casting");
             int intValue = 250;
             byte byteValue = (byte) intValue;
             WriteLine(byteValue);
+            //ReadLine();
 
-            //12
-
+            //12 
+            WriteLine("Question #12: LINQ stuff");
             //https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries
 
             // The Three Parts of a LINQ Query:
@@ -532,6 +517,8 @@ namespace ConsoleApp4_IKMtest
             //var ress = num1.GroupJoin(num2).ToArray();
 
 
+            //12
+            WriteLine("Question #12: LINQ: OrderBy Group CrossJoin Intersect");
 
             int[] array1 = {1, 2, 3, 4};
             int[] array2 = {3, 5, 5, 8};
@@ -548,18 +535,18 @@ namespace ConsoleApp4_IKMtest
                 WriteLine(item.ToString());
             }
 
-
             //WriteLine(resss);
-
-            ReadKey();
+            //ReadKey();
 
 
             //11 2/2
+            WriteLine("Question #11: `ref` parameter");
             StuffDoer.Main11(new string[6]);
-            ReadKey();
+            //ReadKey();
 
 
             //10 - part 2
+            WriteLine("Question #10: Derived Classes & Inheritance");
 
             //B b = new B();
             //A a = new C();
@@ -568,12 +555,42 @@ namespace ConsoleApp4_IKMtest
             A aa = new E();
 
             //7
+            WriteLine("Question #7: Queues");
             //Queue<String>() q = new Queue();
 
+            /*
+             * tried applying this: https://www.tutorialspoint.com/csharp/csharp_queue.htm
+             * wouldn't compile
+             * 
+            Queue q = new Queue();
+            q.Enqueue('A');
+            q.Enqueue('M');
+            q.Enqueue('G');
+            q.Enqueue('W');
+
+            WriteLine("Current queue: ");
+            foreach (char c in q) Console.Write(c + " ");
+
+            WriteLine();
+            q.Enqueue('V');
+            q.Enqueue('H');
+            WriteLine("Current queue: ");
+            foreach (char c in q) Console.Write(c + " ");
+
+            WriteLine();
+            WriteLine("Removing some values ");
+            char ch = (char)q.Dequeue();
+            WriteLine("The removed value: {0}", ch);
+            ch = (char) q.Dequeue();
+            WriteLine("The removed value: {0}", ch);
+
+            //ReadKey();
+            */
 
 
-            var firstName = "";
             //5
+            var firstName = "";
+            WriteLine("Question #5: Exceptions");
             try
             {
 
@@ -595,12 +612,15 @@ namespace ConsoleApp4_IKMtest
 //            }
 //            finally (Exception ex)
 //            {
-//                
+//                        
 //            }
 
-            ReadKey();
+            //ReadKey();
+
+
 
             //1
+            WriteLine("Question #1: Overriding");
             //which of the following are required to override Equals() method in C#?
             Obj obj = new Obj();
             WriteLine(obj.Equals(obj));
@@ -615,3 +635,6 @@ namespace ConsoleApp4_IKMtest
     }
 
 }
+
+//structure: any question that couldn't be referenced verbatim in-Main, was created as either an inner-class inside `Program` class and then referenced within Main, or was created outside that `Program` scope in but within the singular namespace scope of this project, namely `ConsoleApp4_IKMtest` here. Either such classes
+                                                                                                                                                                                                                                                                                                                                   
