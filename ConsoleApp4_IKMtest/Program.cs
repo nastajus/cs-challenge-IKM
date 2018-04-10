@@ -49,6 +49,12 @@ namespace ConsoleApp4_IKMtest
     class Program
     {
 
+        //1
+        class Obj
+        {
+            private int num = 1;
+        }
+
         //7
         /*
          * tried applying this: https://www.tutorialspoint.com/csharp/csharp_queue.htm
@@ -60,23 +66,23 @@ namespace ConsoleApp4_IKMtest
         q.Enqueue('G');
         q.Enqueue('W');
          
-        Console.WriteLine("Current queue: ");
+        WriteLine("Current queue: ");
         foreach (char c in q) Console.Write(c + " ");
          
-        Console.WriteLine();
+        WriteLine();
         q.Enqueue('V');
         q.Enqueue('H');
-        Console.WriteLine("Current queue: ");
+        WriteLine("Current queue: ");
         foreach (char c in q) Console.Write(c + " ");
          
-        Console.WriteLine();
-        Console.WriteLine("Removing some values ");
+        WriteLine();
+        WriteLine("Removing some values ");
         char ch = (char)q.Dequeue();
-        Console.WriteLine("The removed value: {0}", ch);
+        WriteLine("The removed value: {0}", ch);
         ch = (char) q.Dequeue();
-        Console.WriteLine("The removed value: {0}", ch);
+        WriteLine("The removed value: {0}", ch);
          
-        Console.ReadKey();
+        ReadKey();
 
 
 
@@ -89,7 +95,7 @@ namespace ConsoleApp4_IKMtest
         }
         */
 
-            
+
         //14
         private readonly int topSpeed = 333;
         //If it's private and readonly, the benefit is that you can't inadvertently change it from another part of that class after it is initialized. The readonly modifier ensures the field can only be given a value during its initialization or in its class constructor.
@@ -224,31 +230,31 @@ namespace ConsoleApp4_IKMtest
         public class MyTestClass : IMyInterface
         {
             private string name;
-            //goes here.
-            //a -- non public ...no..
-           // protected string Name
-           // {
-           //     get { return name; }
-          //  }
-
-            //b -- yes
-            //public string Name
-          //  {
-        //        get { return name;  }
-       //         set { name = value;  }
-       //     }
-            //c -- override ... no
-           // public override string Name
-         //   {
-         //       get { return name; }
-        //    }
-
-                //d -- no
+//            goes here.
+//            a -- non public ...no..
+//            protected string Name
+//            {
+//                get { return name; }
+//            }
+//
+//            b -- yes
 //            public string Name
-            //{
-              //  private get { return name;  }
+//            {
+//                get { return name;  }
+//                set { name = value;  }
+//            }
+//            c -- override ... no
+//            public override string Name
+//            {
+//                get { return name; }
+//            }
+//
+//                d -- no
+//            public string Name
+//            {
+//                private get { return name;  }
 //                set { name = value; }
-  //          }
+//            }
 
             //e == yes
             public string Name => $"{name}";
@@ -449,12 +455,12 @@ namespace ConsoleApp4_IKMtest
             WriteLine("--");
             //cannot implicitly convert type...
             //e
-            //int[] resulte = values.Select(c => c * c).Take(5).OrderBy(f => f);
-            //foreach (var resultt in resulte)
-            //{
-                //WriteLine(resultt);
-            //}
-            //WriteLine("--");
+//            int[] resulte = values.Select(c => c * c).Take(5).OrderBy(f => f);
+//            foreach (var resultt in resulte)
+//            {
+//                WriteLine(resultt);
+//            }
+//            WriteLine("--");
             ReadKey();
 
 
@@ -491,7 +497,7 @@ namespace ConsoleApp4_IKMtest
             WriteLine(byteValue);
 
             //12
-            /*
+
             //https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries
 
             // The Three Parts of a LINQ Query:
@@ -510,7 +516,6 @@ namespace ConsoleApp4_IKMtest
             {
                 Console.Write("{0,1} ", num);
             }
-            */
 
 
             // https://stackoverflow.com/questions/16012380/merge-2-arrays-using-linq
@@ -540,7 +545,7 @@ namespace ConsoleApp4_IKMtest
 
             foreach (var item in resss)
             {
-                Console.WriteLine(item.ToString());
+                WriteLine(item.ToString());
             }
 
 
@@ -555,11 +560,11 @@ namespace ConsoleApp4_IKMtest
 
 
             //10 - part 2
-            /*
-            B b = new B();
-            A a = new C();
-            E e = new A();
-            C c = new E();
+
+            //B b = new B();
+            //A a = new C();
+            //E e = new A();
+            //C c = new E();
             A aa = new E();
 
             //7
@@ -567,7 +572,6 @@ namespace ConsoleApp4_IKMtest
 
 
 
-            /*
             var firstName = "";
             //5
             try
@@ -576,44 +580,38 @@ namespace ConsoleApp4_IKMtest
             }
             catch (Exception ex) when (firstName == null)
             {
-                Console.WriteLine($"{firstName} cannot be null");
+                WriteLine($"{firstName} cannot be null");
             }
             catch (Exception ex)
             {
                 if (firstName == null)
                 {
-                    Console.WriteLine($"{nameof(firstName)} cannot be null");
+                    WriteLine($"{nameof(firstName)} cannot be null");
                 }
             }
-            catch (Exception ex) when (firstName == null)
-            {
-                Console.WriteLine($"{nameof(firstName)} cannot be null");
-            }
-            finally (Exception ex)
-            {
-                
-            }
-            */
-            Console.ReadKey();
+//            catch (Exception ex) when (firstName == null)
+//            {
+//                WriteLine($"{nameof(firstName)} cannot be null");
+//            }
+//            finally (Exception ex)
+//            {
+//                
+//            }
 
-            /*
+            ReadKey();
+
             //1
             //which of the following are required to override Equals() method in C#?
             Obj obj = new Obj();
-            Console.WriteLine(obj.Equals(obj));
+            WriteLine(obj.Equals(obj));
 
-            Console.WriteLine(obj.Equals(null));
+            WriteLine(obj.Equals(null));
 
             Obj obj1 = new Obj();
             Obj obj2 = new Obj();
-            Console.WriteLine(obj1.Equals(obj2));
-            Console.ReadKey();
-            */
+            WriteLine(obj1.Equals(obj2));
+            ReadKey();
         }
     }
 
-    class Obj
-    {
-        private int num = 1;
-    }
 }
